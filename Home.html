@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Timi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #0a1f44;          /* Dark blue background */
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            font-size: 4.5rem;
+            color: #00b0ff;
+            margin: 40px 0 10px;
+            text-shadow: 0 0 15px rgba(0, 176, 255, 0.6);
+        }
+
+        h2 {
+            text-align: center;
+            color: #40c4ff;
+            font-size: 2.5rem;
+            margin: 30px 0 20px;
+        }
+
+        .h1p {
+            text-align: center;
+            font-size: 1.4rem;
+            color: #80deea;
+            margin-bottom: 30px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        nav {
+            text-align: center;
+            margin: 30px 0 50px;
+        }
+
+        button, a button {
+            color: white;
+            background-color: #0288d1;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            margin: 10px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover, a button:hover {
+            background-color: #00b0ff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 176, 255, 0.4);
+        }
+
+        .logo-container {
+            text-align: center;
+            margin: 40px 0 60px;
+        }
+
+        .logo-svg {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(0, 176, 255, 0.5));
+            transition: all 0.5s ease;
+        }
+
+        .logo-svg:hover {
+            transform: scale(1.08) rotate(2deg);
+            filter: drop-shadow(0 0 35px rgba(0, 176, 255, 0.8));
+        }
+
+        .name {
+            display: block;
+            font-weight: bold;
+            color: #fff176;
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+
+        /* Optional: subtle background grid for tech feel */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: 
+                linear-gradient(rgba(0,176,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,176,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dave Timi</h1>
+    <p class="h1p">Transforming ideas into reality</p>
+
+    <nav>
+        <a href="aboutpage.html"><button>About</button></a>
+        <a href="servicepage.html"><button>Services</button></a>
+        <a href="assistance.html"><button>Assistance</button></a>
+    </nav>
+
+    <div class="logo-container">
+        <!-- Pure SVG graphic logo for Dave Timi (circuit-style DT monogram) -->
+        <svg class="logo-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background subtle glow circle -->
+            <defs>
+                <radialGradient id="glow" cx="50%" cy="50%" r="70%">
+                    <stop offset="0%" stop-color="#00b0ff" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#0288d1" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <circle cx="200" cy="200" r="180" fill="url(#glow)"/>
+
+            <!-- Circuit lines / connections -->
+            <g stroke="#00e5ff" stroke-width="4" fill="none" opacity="0.7">
+                <path d="M 100 140 L 140 100 L 180 140 L 220 100 L 260 140 L 300 100"/>
+                <path d="M 100 260 L 140 300 L 180 260 L 220 300 L 260 260 L 300 300"/>
+                <circle cx="140" cy="140" r="12" fill="#00b0ff"/>
+                <circle cx="260" cy="140" r="12" fill="#00b0ff"/>
+                <circle cx="140" cy="260" r="12" fill="#00b0ff"/>
+                <circle cx="260" cy="260" r="12" fill="#00b0ff"/>
+            </g>
+
+            <!-- Main DT monogram with circuit style -->
+            <g fill="#ffffff" font-family="Arial Black, sans-serif" font-weight="bold">
+                <text x="200" y="220" font-size="180" text-anchor="middle" fill="#0288d1">D</text>
+                <text x="280" y="220" font-size="180" text-anchor="middle" fill="#00b0ff">T</text>
+            </g>
+
+            <!-- Connecting circuit line between D and T -->
+            <path d="M 170 200 Q 200 160, 230 200 Q 200 240, 170 200" 
+                  stroke="#00e5ff" stroke-width="8" fill="none" stroke-linecap="round">
+                <animate attributeName="stroke-dasharray" values="0,300;300,0" dur="4s" repeatCount="indefinite"/>
+            </path>
+
+            <!-- Small nodes on the connection -->
+            <circle cx="200" cy="180" r="8" fill="#fff176"/>
+            <circle cx="200" cy="220" r="8" fill="#fff176"/>
+
+            <!-- Company name below -->
+            <text x="200" y="340" font-size="48" text-anchor="middle" fill="#80deea" font-family="Arial, sans-serif">
+                Dave Timi
+            </text>
+        </svg>
+    </div>
+
+    <h2>Welcome To Dave Timi Company</h2>
+    <p>
+        A passionate set of developers and innovators dedicated to helping businesses thrive in the digital age. 
+        Building a better tomorrow, one line of code at a time where innovation meets inspiration.<br>
+        Empowering your dreams digitally. Creating possibilities, delivering excellence.<br>
+        <span class="name">OLUWAGBOHUN DAVID TIMILEYIN</span>
+    </p>
+
+</body>
+</html>
